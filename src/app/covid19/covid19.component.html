@@ -1,4 +1,13 @@
-<table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+<div></div>
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+<mat-form-field>
+  <mat-label>Filter</mat-label>
+  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Ex. ium">
+</mat-form-field>
+
+<div class="mat-elevation-z8">
+<table mat-table [dataSource]="dataSource" matSort>
 
     <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
@@ -69,4 +78,4 @@
   </table>
   
   <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
-  
+</div>
